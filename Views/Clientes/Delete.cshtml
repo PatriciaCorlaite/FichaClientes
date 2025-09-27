@@ -1,0 +1,16 @@
+﻿@model FichaClientes.Models.Cliente
+
+<h2>Excluir Cliente</h2>
+
+<p>Tem certeza que deseja excluir este cliente?</p>
+
+<div>
+    <strong>@Model.Nome</strong> - @Model.Email - @Model.Telefone
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+</form>
+
+<a asp-action="Index">Voltar</a>
